@@ -1,0 +1,169 @@
+/** GLOBALES**/
+:root{
+    --blanco: #FCFCFC;
+    --blancoBody: #FFFFFF;
+    --negro: #000000;
+    --gris: #F1F1F1;
+    --azul: #3D8AFF;
+    --grisBorder: #DEDEDE;
+    --rojo: #ED4956;
+    --fuentePrincipal: 'Inter', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px; /** 1rem = 10px **/
+    font-family: var(--fuentePrincipal);
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--blancoBody)
+}
+
+/** Container **/
+.container{
+    width: 53rem;
+    height: auto;
+    border: 1px solid var(--grisBorder);
+    box-shadow: -1px 7px 8px -5px rgba(0, 0, 0, 0.14);
+    border-radius: .5rem;
+    margin: auto;
+}
+.container__component{
+    max-width: 95%;
+    max-height: 95%;
+    margin: 0 auto;
+}
+
+/** Info **/
+.info{
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+.info__image{
+    border-radius: 100%;
+    height: 5rem;
+    width: 5rem;
+}
+.info__data{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.info__data--name{
+    font-size:1.4rem;
+    font-weight: 500;
+    margin:0;
+}
+.info__data--city{
+    font-size:1rem;
+    font-weight: 400;
+    margin:0;
+}
+
+/** Carousel **/
+.carousel{
+    background: var(--gris);
+}
+.carousel__image{
+    height: 33rem;
+    z-index: 1;
+}
+
+/** Buttons **/
+.button{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+}
+.button__like{
+    stroke: var(--negro)
+}
+
+/** Description **/
+.description__text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.description__text--comment{
+    font-weight: 400;
+}
+
+/** Comment **/
+.comment{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5%;
+}
+.comment__text{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+.comment__text--comment{
+    font-weight: 400;
+}
+
+/** formComment **/
+.formComment{
+    width: 100%;
+    background: var(--gris);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2.5%;
+}
+.formComment input{
+    border: none;
+    background: var(--gris);
+    width: 95%;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.formComment input:focus{
+    outline: none;
+    border: none;
+}
+.formComment button{
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--azul);
+    cursor: pointer;
+}
+
+/** Liked **/
+@keyframes addLiked {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      transform: scale3d(1.3, 1.3, 1.3);
+    }
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+.liked{
+    fill: var(--rojo);
+    stroke: var(--rojo);
+    animation: addLiked .5s;
+}
+
+/**  **/
